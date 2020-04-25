@@ -12,5 +12,11 @@ pipeline {
       }
     }
 
+    stage('Run build') {
+      steps {
+        sh 'sudo build/run.sh make'
+      }
+    }
+
   }
 }
