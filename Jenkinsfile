@@ -8,14 +8,16 @@ pipeline {
   stages {
     stage('Run Git Pull') {
       steps {
-        sh '''git pull
+        sh '''cd /home/ben/kubernetes
+git pull
 pwd'''
       }
     }
 
     stage('Run build') {
       steps {
-        sh 'sudo build/run.sh make'
+        sh '''cd /home/ben/kubernetes
+sudo build/run.sh make'''
       }
     }
 
